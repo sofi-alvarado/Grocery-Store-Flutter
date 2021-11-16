@@ -1,3 +1,4 @@
+//Staggered
 import 'package:flutter/material.dart';
 
 class StaggeredDualView extends StatelessWidget {
@@ -9,11 +10,11 @@ class StaggeredDualView extends StatelessWidget {
 
   const StaggeredDualView(
       {Key key,
-        @required this.itemBuilder,
-        @required this.itemCount,
-        @required this.itemPercent,
-        this.spacing = 0.0,
-        this.aspectRatio = 0.5})
+      @required this.itemBuilder,
+      @required this.itemCount,
+      @required this.itemPercent,
+      this.spacing = 0.0,
+      this.aspectRatio = 0.5})
       : super(key: key);
 
   @override
@@ -40,7 +41,7 @@ class StaggeredDualView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Transform.translate(
                 offset:
-                Offset(0.0, index.isOdd ? itemHeight * itemPercent : 0.0),
+                    Offset(0.0, index.isOdd ? itemHeight * itemPercent : 0.0),
                 child: itemBuilder(context, index),
               );
             },
